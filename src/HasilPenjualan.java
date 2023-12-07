@@ -24,7 +24,8 @@ public class HasilPenjualan {
     }
 
     public void sort(ArrayList<Data> tabel, int n) {
-        // 1 = sort berdasarkan Nama
+        // 1 = sort berdasarkan Nama Ascending
+        // 2 = sort berdasarkan Nama Descending
         // 3 = sort berdasarkan Jumlah secara Ascending
         // 4 = sort berdasarkan Jumlah secara Descending
         // 5 = sort berdasarkan Harga Satuan secara Ascending
@@ -32,7 +33,31 @@ public class HasilPenjualan {
         // 7 = sort berdasarkan Total Harga secara Ascending
         // 8 = sort berdasarkan Total Harga secara Descending
         int length = tabel.size();
-        if (n == 3) {
+        if(n==1){
+            for (int i = 1; i < length; ++i) {
+                Data key = tabel.get(i);
+                int j = i - 1;
+
+                while (j >= 0 && tabel.get(j).getNamaBarang().compareTo(key.getNamaBarang()) > 0) {
+                    tabel.set(j + 1, tabel.get(j));
+                    j = j - 1;
+                }
+
+                tabel.set(j + 1, key);
+            }
+        }else if(n==2){
+            for (int i = 1; i < length; ++i) {
+            Data key = tabel.get(i);
+            int j = i - 1;
+
+            while (j >= 0 && tabel.get(j).getNamaBarang().compareTo(key.getNamaBarang()) < 0) {
+                tabel.set(j + 1, tabel.get(j));
+                j = j - 1;
+            }
+
+            tabel.set(j + 1, key);
+        }
+        }else if (n == 3) {
             for (int i = 1; i < length; ++i) {
                 Data key = tabel.get(i);
                 int j = i - 1;
@@ -99,6 +124,16 @@ public class HasilPenjualan {
         print(tabel);
     }
 
+    public void search(ArrayList<Data> tabel, String text){
+        ArrayList<Data> hasil = new ArrayList<Data>();
+        for(Data k : tabel){
+            if(k.getNamaBarang().contains(text)){
+                hasil.add(k);
+            }
+        }
+        sort(hasil, 1);
+    }
+
     public void print(ArrayList<Data> tabel) {
         String header = "No.\t|\tNama\t|\tNama Barang\t|\tJumlah\t|\tHarga Satuan\t|\tTotal Harga";
         System.out.println(header);
@@ -124,36 +159,6 @@ public class HasilPenjualan {
 
     public ArrayList<Data> sortTotalHargaD(ArrayList<Data> tabel) {
         return tabel;
-    }
-
-    public void sortNamaA(ArrayList<Data> tabel) {
-        int panjang = tabel.size();
-        for (int i = 1; i < panjang; ++i) {
-            Data key = tabel.get(i);
-            int j = i - 1;
-
-            while (j >= 0 && tabel.get(j).getNamaBarang().compareTo(key.getNamaBarang()) > 0) {
-                tabel.set(j + 1, tabel.get(j));
-                j = j - 1;
-            }
-
-            tabel.set(j + 1, key);
-        }
-    }
-
-    public void sortNamaD(ArrayList<Data> tabel) {
-        int panjang = tabel.size();
-        for (int i = 1; i < panjang; ++i) {
-            Data key = tabel.get(i);
-            int j = i - 1;
-
-            while (j >= 0 && tabel.get(j).getNamaBarang().compareTo(key.getNamaBarang()) < 0) {
-                tabel.set(j + 1, tabel.get(j));
-                j = j - 1;
-            }
-
-            tabel.set(j + 1, key);
-        }
     }
 
 }

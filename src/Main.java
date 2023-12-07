@@ -32,20 +32,18 @@ public class Main {
             System.out.println("6 = Sort berdasarkan Harga Satuan secara Descending");
             System.out.println("7 = Sort berdasarkan Total Harga secara Ascending");
             System.out.println("8 = Sort berdasarkan Total Harga secara Descending");
+            System.out.println("9 = Search berdasarkan Nama Barang");
             System.out.print("Pilih sort yang ingin dipilih : ");
             int input = sc2.nextInt();
-
-            if(input == 1) {
-                tabel.sortNamaA(tabel.getTabel());
-            } else if (input == 2){
-                tabel.sortNamaD(tabel.getTabel());
+            if(input == 9) {
+                System.out.print("Masukkan nama barang yang ingin dicari : ");
+                String namaBarang = sc2.next();
+                tabel.search(tabel.getTabel(), namaBarang);
+            }else {
+                tabel.sort(tabel.getTabel(), input);
             }
-
-            tabel.print(tabel.getTabel());
-            
-            tabel.sort(tabel.getTabel(), input);
             System.out.print("Apakah ingin melakukan pengolahan ulang (y or n)? ");
-            con = sc2.nextLine();
+            con = sc2.next();
         }
         sc2.close();
     }
