@@ -1,0 +1,9 @@
+Bryan,Nugget,10,50000.0,500000.0
+Jhoni,Sosis Kanzler,5,10000.0,50000.0
+Frans,Sosis Kanzler,5,10000.0,50000.0
+Parisya,Sosis Kanzler,5,10000.0,50000.0
+Zevanya,Sosis Kanzler,5,10000.0,50000.0
+Darrell,Sosis Kanzler,5,10000.0,50000.0
+Bagiyo,Sosis Kanzler,5,10000.0,50000.0
+Avrilia,Sosis Kanzler,5,10000.0,50000.0
+Ryansyah,Sosis Kanzler,5,10000.0,50000.0
