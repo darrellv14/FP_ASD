@@ -13,14 +13,15 @@ public class Main {
         }
         sc.close();
         int j =1;
-        String header = "No.\t|\tNama\t|\tNama Barang\t|\tJumlah\t|\tHarga Satuan\t|\tTotal Harga";
-        System.out.println(header);
+        // String header = "No.\t|\tNama\t|\tNama Barang\t|\tJumlah\t|\tHarga Satuan\t|\tTotal Harga";
+        // System.out.println(header);
 
-        for(Data k : tabel.getTabel()) {
-            System.out.print(j + "\t");
-            System.out.println(k);
-            j++;
-        }
+        // for(Data k : tabel.getTabel()) {
+        //     System.out.print(j + "\t");
+        //     System.out.println(k);
+        //     j++;
+        // }
+        tabel.print(tabel.getTabel());
         
         String con = "y";
         while(con.equals("y")) {

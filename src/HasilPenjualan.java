@@ -135,14 +135,17 @@ public class HasilPenjualan {
     }
 
     public void print(ArrayList<Data> tabel) {
-        String header = "No.\t|\tNama\t|\tNama Barang\t|\tJumlah\t|\tHarga Satuan\t|\tTotal Harga";
-        System.out.println(header);
         int i = 1;
+        System.out.format("%-10s%s%-15s%s%-25s%s%-15s%s%-15s%s%-15s%n","No.","|","Nama","|","Nama Barang","|","Jumlah","|","Harga Satuan","|","Total Harga");
+        for(int j = 0;j<95;j++) {
+            System.out.print("-");
+        }
+        System.out.println();
         for (Data k : tabel) {
-            System.out.print(i + "\t|\t");
-            System.out.println(k);
+            System.out.format("%-10s%s%-15s%s%-25s%s%-15s%s%-15s%s%-15s%n", i,"|", k.getNama(),"|", k.getNamaBarang(),"|", k.getJumlah(),"|", k.getHargaSatuan(),"|", k.getTotalHarga());
             i++;
         }
+        
     }
 
     public ArrayList<Data> sortJumlahA(ArrayList<Data> tabel) {
