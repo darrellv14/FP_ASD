@@ -128,29 +128,31 @@ public class HasilPenjualan {
 
     public void sortNamaA(ArrayList<Data> tabel) {
         int panjang = tabel.size();
-        for (int i = 0; i < panjang - 1; i++) {
-            for (int j = 0; j < panjang - i - 1; j++) {
-                if (tabel.get(j).getNama().compareTo(tabel.get(j + 1).getNama()) > 0) {
-                    // Swap
-                    Data temp = tabel.get(j);
-                    tabel.set(j, tabel.get(j + 1));
-                    tabel.set(j + 1, temp);
-                }
+        for (int i = 1; i < panjang; ++i) {
+            Data key = tabel.get(i);
+            int j = i - 1;
+
+            while (j >= 0 && tabel.get(j).getNamaBarang().compareTo(key.getNamaBarang()) > 0) {
+                tabel.set(j + 1, tabel.get(j));
+                j = j - 1;
             }
+
+            tabel.set(j + 1, key);
         }
     }
 
     public void sortNamaD(ArrayList<Data> tabel) {
         int panjang = tabel.size();
-        for (int i = 0; i < panjang - 1; i++) {
-            for (int j = 0; j < panjang - i - 1; j++) {
-                if (tabel.get(j).getNama().compareTo(tabel.get(j + 1).getNama()) < 0) {
-                    // Swap
-                    Data temp = tabel.get(j);
-                    tabel.set(j, tabel.get(j + 1));
-                    tabel.set(j + 1, temp);
-                }
+        for (int i = 1; i < panjang; ++i) {
+            Data key = tabel.get(i);
+            int j = i - 1;
+
+            while (j >= 0 && tabel.get(j).getNamaBarang().compareTo(key.getNamaBarang()) < 0) {
+                tabel.set(j + 1, tabel.get(j));
+                j = j - 1;
             }
+
+            tabel.set(j + 1, key);
         }
     }
 
