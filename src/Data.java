@@ -5,7 +5,7 @@ public class Data {
     private double hargaSatuan;
     private double totalHarga;
 
-    public Data( String nama, String namaBarang, int jumlah, double hargaSatuan, double totalHarga) {
+    public Data(String nama, String namaBarang, int jumlah, double hargaSatuan, double totalHarga) {
         this.nama = nama;
         this.namaBarang = namaBarang;
         this.jumlah = jumlah;
@@ -33,8 +33,6 @@ public class Data {
         return namaBarang;
     }
 
-
-
     public void setNama(String nama) {
         this.nama = nama;
     }
@@ -54,7 +52,6 @@ public class Data {
     public void setNamaBarang(String namaBarang) {
         this.namaBarang = namaBarang;
     }
-
 
     public String toString() {
         return getNama() + "\t \t" + getNamaBarang() + "\t \t" + getJumlah() + "\t \t" + getHargaSatuan() + "\t \t" + getTotalHarga();

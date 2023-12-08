@@ -120,7 +120,6 @@ public class HasilPenjualan {
                 tabel.set(j + 1, key);
             }
         }
-
         print(tabel);
     }
 
@@ -135,33 +134,61 @@ public class HasilPenjualan {
     }
 
     public void print(ArrayList<Data> tabel) {
+        // ANSI escape code constants for text colors and background colors
+        String BLACK = "\033[0;30m";   // BLACK
+        String RED = "\033[0;31m";     // RED
+        String GREEN = "\033[0;32m";   // GREEN
+        String YELLOW = "\033[0;33m";  // YELLOW
+        String BLUE = "\033[0;34m";    // BLUE
+        String PURPLE = "\033[0;35m";  // PURPLE
+        String CYAN = "\033[0;36m";    // CYAN
+        String WHITE = "\033[0;37m";   // WHITE
+        
+        String BLACK_BRIGHT = "\033[0;90m";  // BLACK
+        String RED_BRIGHT = "\033[0;91m";    // RED
+        String GREEN_BRIGHT = "\033[0;92m";  // GREEN
+        String YELLOW_BRIGHT = "\033[0;93m"; // YELLOW
+        String BLUE_BRIGHT = "\033[0;94m";   // BLUE
+        String PURPLE_BRIGHT = "\033[0;95m"; // PURPLE
+        String CYAN_BRIGHT = "\033[0;96m";   // CYAN
+        String WHITE_BRIGHT = "\033[0;97m";  // WHITE
+
+        String BLACK_BOLD_BRIGHT = "\033[1;90m"; // BLACK
+        String RED_BOLD_BRIGHT = "\033[1;91m";   // RED
+        String GREEN_BOLD_BRIGHT = "\033[1;92m"; // GREEN
+        String YELLOW_BOLD_BRIGHT = "\033[1;93m";// YELLOW
+        String BLUE_BOLD_BRIGHT = "\033[1;94m";  // BLUE
+        String PURPLE_BOLD_BRIGHT = "\033[1;95m";// PURPLE
+        String CYAN_BOLD_BRIGHT = "\033[1;96m";  // CYAN
+        String WHITE_BOLD_BRIGHT = "\033[1;97m"; // WHITE
+
+        String BLACK_BACKGROUND = "\033[40m";  // BLACK
+        String RED_BACKGROUND = "\033[41m";    // RED
+        String GREEN_BACKGROUND = "\033[42m";  // GREEN
+        String YELLOW_BACKGROUND = "\033[43m"; // YELLOW
+        String BLUE_BACKGROUND = "\033[44m";   // BLUE
+        String PURPLE_BACKGROUND = "\033[45m"; // PURPLE
+        String CYAN_BACKGROUND = "\033[46m";   // CYAN
+        String WHITE_BACKGROUND = "\033[47m";  // WHITE
+
+        String RESET = "\033[0m";  // Text Reset
+
         int i = 1;
-        System.out.format("%-10s%s%-15s%s%-25s%s%-15s%s%-15s%s%-15s%n","No.","|","Nama","|","Nama Barang","|","Jumlah","|","Harga Satuan","|","Total Harga");
-        for(int j = 0;j<95;j++) {
+        System.out.format(WHITE_BOLD_BRIGHT +"%-10s%s%-15s%s%-25s%s%-10s%s%-15s%s%-15s%n","    No.","|","    Nama","|","    Nama Barang","|","  Jumlah","|","  Harga Satuan","|","  Total Harga"+RESET);
+        for(int j = 0;j<94;j++) {
             System.out.print("-");
         }
         System.out.println();
         for (Data k : tabel) {
-            System.out.format("%-10s%s%-15s%s%-25s%s%-15s%s%-15s%s%-15s%n", i,"|", k.getNama(),"|", k.getNamaBarang(),"|", k.getJumlah(),"|", k.getHargaSatuan(),"|", k.getTotalHarga());
+            if(i%2==0){
+                System.out.printf(WHITE + "%-10s%s%-15s%s%-25s%s%-10s%s%-15s%s%-15s", ("    "+i),"|", "    "+k.getNama(),"|", "    "+k.getNamaBarang(),"|", "    "+k.getJumlah(),"|", ("   Rp."+k.getHargaSatuan()),"|", ("   Rp."+k.getTotalHarga())+RESET);
+                System.out.println();
+            }else{
+                System.out.printf(BLACK + "%-10s%s%-15s%s%-25s%s%-10s%s%-15s%s%-15s", ("    "+i),"|", "    "+k.getNama(),"|", "    "+k.getNamaBarang(),"|", "    "+k.getJumlah(),"|", ("   Rp."+k.getHargaSatuan()),"|", ("   Rp."+k.getTotalHarga())+RESET);
+                System.out.println();
+            }
             i++;
         }
-        
-    }
-
-    public ArrayList<Data> sortJumlahA(ArrayList<Data> tabel) {
-        return tabel;
-    }
-
-    public ArrayList<Data> sortJumlahD(ArrayList<Data> tabel) {
-        return tabel;
-    }
-
-    public ArrayList<Data> sortTotalHargaA(ArrayList<Data> tabel) {
-        return tabel;
-    }
-
-    public ArrayList<Data> sortTotalHargaD(ArrayList<Data> tabel) {
-        return tabel;
     }
 
 }

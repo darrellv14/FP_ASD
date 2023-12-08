@@ -3,7 +3,8 @@ Jhoni,Sosis Kanzler,5,10000.0,50000.0
 Frans,Fiesta Wings,5,10000.0,50000.0
 Parisya,Champ Sosis,5,10000.0,50000.0
 Zevanya,Frozen Delight,5,10000.0,50000.0
-Darrell,Arctic Bites,5,10000.0,50000.0
+Darrell,Arctic Bites,100,10000.0,50000.0
 Bagiyo,Frosty Sausages,5,10000.0,50000.0
 Avrilia,Snowy Delicacies,5,10000.0,50000.0
 Ryansyah,Icy Treats,5,10000.0,50000.0
+Roby,Icy Treats,5,10000.0,50000.0

@@ -1,4 +1,4 @@
-    import java.util.Scanner;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,7 +9,7 @@ public class Main {
         while(sc.hasNextLine()) {
             String line = sc.nextLine();
             String[] lineSplit = line.split(",");
-            tabel.add(lineSplit[0],lineSplit[1],Integer.parseInt(lineSplit[2]),Double.parseDouble(lineSplit[3]),Double.parseDouble(lineSplit[4]));
+            tabel.add(lineSplit[0], lineSplit[1], Integer.parseInt(lineSplit[2]), Double.parseDouble(lineSplit[3]), Double.parseDouble(lineSplit[4]));
         }
         sc.close();
         int j =1;
@@ -22,7 +22,7 @@ public class Main {
         //     j++;
         // }
         tabel.print(tabel.getTabel());
-        
+        System.out.println();
         String con = "y";
         while(con.equals("y")) {
             System.out.println("1 = Sort berdasarkan Nama A-Z");
