@@ -9,6 +9,6 @@ Avrilia,Snowy Delicacies,5,10000.0,50000.0
 Ryansyah,Icy Treats,5,10000.0,50000.0
 Roby,Icy Treats,5,10000.0,50000.0
 Indomaret,Fiesta Stikie,100,25000.0,500000.0
-Alfamidi,Fiesta Stikie,100,25000.0,500000.0
+Alfamaret,Fiesta Stikie,100,25000.0,500000.0
 ITS Mart,Tahu Susu Yun Yi,75,28000.0,50000.0
 CV Sakinah,Barokah Wings,50,21000,500000.0
