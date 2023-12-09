@@ -1,7 +1,5 @@
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 
 public class HasilPenjualan {
     private ArrayList<Data> tabel = new ArrayList<Data>();
@@ -24,40 +22,64 @@ public class HasilPenjualan {
     }
 
     public void sort(ArrayList<Data> tabel, int n) {
-        // 1 = sort berdasarkan Nama Ascending
-        // 2 = sort berdasarkan Nama Descending
-        // 3 = sort berdasarkan Jumlah secara Ascending
-        // 4 = sort berdasarkan Jumlah secara Descending
-        // 5 = sort berdasarkan Harga Satuan secara Ascending
-        // 6 = sort berdasarkan Harga Satuan secara Descending
-        // 7 = sort berdasarkan Total Harga secara Ascending
-        // 8 = sort berdasarkan Total Harga secara Descending
+        // 0 = sort berdasarkan Nama Pelanggan Ascending
+        // 1 = sort berdasarkan Nama Pelanggan Ascending
+        // 2 = sort berdasarkan Nama Ascending
+        // 3 = sort berdasarkan Nama Descending
+        // 4 = sort berdasarkan Jumlah secara Ascending
+        // 5 = sort berdasarkan Jumlah secara Descending
+        // 6 = sort berdasarkan Harga Satuan secara Ascending
+        // 7 = sort berdasarkan Harga Satuan secara Descending
+        // 8 = sort berdasarkan Total Harga secara Ascending
+        // 9 = sort berdasarkan Total Harga secara Descending
         int length = tabel.size();
-        if(n==1){
+        if(n == 0) {
+            for(int i = 1; i < length; i++) {
+                Data key = tabel.get(i);
+                int j = i - 1;
+
+                while (j >= 0 && tabel.get(j).getNama().compareTo(key.getNama()) > 0) {
+                    tabel.set(j + 1, tabel.get(j));
+                    j--;
+                }
+                tabel.set(j + 1, key);
+            }
+        }else if(n == 1) {
+            for(int i = 1; i < length; ++i) {
+                Data key = tabel.get(i);
+                int j = i - 1;
+
+                while (j >= 0 && tabel.get(j).getNama().compareTo(key.getNama()) > 0) {
+                    tabel.set(j + 1, tabel.get(j));
+                    j--;
+                }
+                tabel.set(j + 1, key);
+            }
+        }else if(n == 2){
             for (int i = 1; i < length; ++i) {
                 Data key = tabel.get(i);
                 int j = i - 1;
 
                 while (j >= 0 && tabel.get(j).getNamaBarang().compareTo(key.getNamaBarang()) > 0) {
                     tabel.set(j + 1, tabel.get(j));
+                    j--;
+                }
+
+                tabel.set(j + 1, key);
+            }
+        }else if(n == 3){
+                for (int i = 1; i < length; ++i) {
+                Data key = tabel.get(i);
+                int j = i - 1;
+
+                while (j >= 0 && tabel.get(j).getNamaBarang().compareTo(key.getNamaBarang()) < 0) {
+                    tabel.set(j + 1, tabel.get(j));
                     j = j - 1;
                 }
 
                 tabel.set(j + 1, key);
             }
-        }else if(n==2){
-            for (int i = 1; i < length; ++i) {
-            Data key = tabel.get(i);
-            int j = i - 1;
-
-            while (j >= 0 && tabel.get(j).getNamaBarang().compareTo(key.getNamaBarang()) < 0) {
-                tabel.set(j + 1, tabel.get(j));
-                j = j - 1;
-            }
-
-            tabel.set(j + 1, key);
-        }
-        }else if (n == 3) {
+        }else if (n == 4) {
             for (int i = 1; i < length; ++i) {
                 Data key = tabel.get(i);
                 int j = i - 1;
@@ -68,7 +90,7 @@ public class HasilPenjualan {
                 tabel.set(j + 1, key);
             }
 
-        } else if (n == 4) {
+        } else if (n == 5) {
             for (int i = 1; i < length; ++i) {
                 Data key = tabel.get(i);
                 int j = i - 1;
@@ -79,7 +101,7 @@ public class HasilPenjualan {
                 }
                 tabel.set(j + 1, key);
             }
-        } else if (n == 5) {
+        } else if (n == 6) {
             for (int i = 1; i < length; ++i) {
                 Data key = tabel.get(i);
                 int j = i - 1;
@@ -89,7 +111,7 @@ public class HasilPenjualan {
                 }
                 tabel.set(j + 1, key);
             }
-        } else if (n == 6) {
+        } else if (n == 7) {
             for (int i = 1; i < length; ++i) {
                 Data key = tabel.get(i);
                 int j = i - 1;
@@ -99,7 +121,7 @@ public class HasilPenjualan {
                 }
                 tabel.set(j + 1, key);
             }
-        } else if (n == 7) {
+        } else if (n == 8) {
             for (int i = 1; i < length; ++i) {
                 Data key = tabel.get(i);
                 int j = i - 1;
@@ -109,7 +131,7 @@ public class HasilPenjualan {
                 }
                 tabel.set(j + 1, key);
             }
-        } else if (n == 8) {
+        } else if (n == 9) {
             for (int i = 1; i < length; ++i) {
                 Data key = tabel.get(i);
                 int j = i - 1;

@@ -25,15 +25,17 @@ public class Main {
         System.out.println();
         String con = "y";
         while(con.equals("y")) {
-            System.out.println("1 = Sort berdasarkan Nama A-Z");
-            System.out.println("2 = Sort berdasarkan Nama Z-A");
-            System.out.println("3 = Sort berdasarkan Jumlah secara Ascending");
-            System.out.println("4 = Sort berdasarkan Jumlah secara Descending");
-            System.out.println("5 = Sort berdasarkan Harga Satuan secara Ascending");
-            System.out.println("6 = Sort berdasarkan Harga Satuan secara Descending");
-            System.out.println("7 = Sort berdasarkan Total Harga secara Ascending");
-            System.out.println("8 = Sort berdasarkan Total Harga secara Descending");
-            System.out.println("9 = Search berdasarkan Nama Barang");
+            System.out.println("0 = Sort berdasarkan Nama Pelanggan A-Z");
+            System.out.println("1 = Sort berdasarkan Nama Pelanggan A-Z");
+            System.out.println("2 = Sort berdasarkan Nama Produk A-Z");
+            System.out.println("3 = Sort berdasarkan Nama Produk Z-A");
+            System.out.println("4 = Sort berdasarkan Jumlah secara Ascending");
+            System.out.println("5 = Sort berdasarkan Jumlah secara Descending");
+            System.out.println("6 = Sort berdasarkan Harga Satuan secara Ascending");
+            System.out.println("7 = Sort berdasarkan Harga Satuan secara Descending");
+            System.out.println("8 = Sort berdasarkan Total Harga secara Ascending");
+            System.out.println("9 = Sort berdasarkan Total Harga secara Descending");
+            System.out.println("10 = Search berdasarkan Nama Barang");
             System.out.print("Pilih sort yang ingin dipilih : ");
             int input = sc2.nextInt();
             if(input == 9) {
