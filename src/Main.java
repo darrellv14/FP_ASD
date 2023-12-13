@@ -5,49 +5,63 @@ public class Main {
         Scanner sc = new Scanner(Main.class.getResourceAsStream("input.txt"));
         Scanner sc2 = new Scanner(System.in);
         HasilPenjualan tabel = new HasilPenjualan();
-        
-        while(sc.hasNextLine()) {
+
+        while (sc.hasNextLine()) {
             String line = sc.nextLine();
             String[] lineSplit = line.split(",");
-            tabel.add(lineSplit[0], lineSplit[1], Integer.parseInt(lineSplit[2]), Double.parseDouble(lineSplit[3]), Double.parseDouble(lineSplit[4]));
+            tabel.add(lineSplit[0], lineSplit[1], Integer.parseInt(lineSplit[2]), Double.parseDouble(lineSplit[3]),
+                    Double.parseDouble(lineSplit[4]));
         }
         sc.close();
-        int j =1;
-        // String header = "No.\t|\tNama\t|\tNama Barang\t|\tJumlah\t|\tHarga Satuan\t|\tTotal Harga";
-        // System.out.println(header);
+        int j = 1;
 
-        // for(Data k : tabel.getTabel()) {
-        //     System.out.print(j + "\t");
-        //     System.out.println(k);
-        //     j++;
-        // }
         tabel.print(tabel.getTabel());
         System.out.println();
-        String con = "y";
-        while(con.equals("y")) {
-            System.out.println("0 = Sort berdasarkan Nama Pelanggan A-Z");
-            System.out.println("1 = Sort berdasarkan Nama Pelanggan A-Z");
-            System.out.println("2 = Sort berdasarkan Nama Produk A-Z");
-            System.out.println("3 = Sort berdasarkan Nama Produk Z-A");
-            System.out.println("4 = Sort berdasarkan Jumlah secara Ascending");
-            System.out.println("5 = Sort berdasarkan Jumlah secara Descending");
-            System.out.println("6 = Sort berdasarkan Harga Satuan secara Ascending");
-            System.out.println("7 = Sort berdasarkan Harga Satuan secara Descending");
-            System.out.println("8 = Sort berdasarkan Total Harga secara Ascending");
-            System.out.println("9 = Sort berdasarkan Total Harga secara Descending");
-            System.out.println("10 = Search berdasarkan Nama Barang");
-            System.out.print("Pilih sort yang ingin dipilih : ");
+        
+        String con = "";
+        while (true) {
+            System.out.println("[0] Sort Nama A-Z");
+            System.out.println("[1] Sort Nama Z-A");
+            System.out.println("[2] Sort Nama Barang A-Z");
+            System.out.println("[3] Sort Nama Barang Z-A");
+            System.out.println("[4] Sort Jumlah Ascending");
+            System.out.println("[5] Sort Jumlah Descending");
+            System.out.println("[6] Sort Harga Satuan Ascending");
+            System.out.println("[7] Sort Harga Satuan Descending");
+            System.out.println("[8] Sort Total Harga Ascending");
+            System.out.println("[9] Sort Total Harga Descending");
+            System.out.println("[10] Search berdasarkan Nama Barang\n");
+
+            System.out.print("\033[1;92mPilih pengolahan ingin dipilih : \033[0m");
             int input = sc2.nextInt();
-            if(input == 9) {
+            System.out.println();
+
+            if (input == 10) {
                 System.out.print("Masukkan nama barang yang ingin dicari : ");
                 String namaBarang = sc2.next();
                 tabel.search(tabel.getTabel(), namaBarang);
-            }else {
+            } else if (input > 10 || input < 0) {
+                System.out.println("\033[1;91mMasukkan nomor pengolahan antara 0 - 10\033[0m\n");
+                continue;
+            } else {
                 tabel.sort(tabel.getTabel(), input);
             }
-            System.out.print("Apakah ingin melakukan pengolahan ulang (y or n)? ");
-            con = sc2.next();
+
+            con = "";
+            while (true) {
+                System.out.print("Apakah ingin melakukan pengolahan ulang (y or n)? ");
+                con = sc2.next();
+                System.out.println();
+                if (con.equals("y") || con.equals("n")) {
+                    break;
+                }
+            }
+
+            if (con.equals("n")) {
+                sc2.close();
+                break;
+            } 
+
         }
-        sc2.close();
     }
 }
