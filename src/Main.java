@@ -33,7 +33,14 @@ public class Main {
             System.out.println("[10] Search berdasarkan Nama Barang\n");
 
             System.out.print("\033[1;92mPilih pengolahan ingin dipilih : \033[0m");
-            int input = sc2.nextInt();
+            int input;
+            try {
+                input = sc2.nextInt();
+            } catch (Exception e) {
+                System.out.println("\033[1;91mMasukkan nomor pengolahan antara 0 - 10\033[0m\n");
+                sc2.nextLine();
+                continue;
+            }
             System.out.println();
 
             if (input == 10) {
@@ -50,10 +57,12 @@ public class Main {
             con = "";
             while (true) {
                 System.out.print("Apakah ingin melakukan pengolahan ulang (y or n)? ");
-                con = sc2.next();
+                con = sc2.next().toLowerCase();
                 System.out.println();
                 if (con.equals("y") || con.equals("n")) {
                     break;
+                } else {
+                    System.out.println("\033[1;91mMasukkan 'y' untuk ya atau 'n' untuk tidak\033[0m\n");
                 }
             }
 
