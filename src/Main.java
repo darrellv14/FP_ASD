@@ -13,11 +13,11 @@ public class Main {
                     Double.parseDouble(lineSplit[4]));
         }
         sc.close();
-        int j = 1;
 
+        System.out.println();
         tabel.print(tabel.getTabel());
         System.out.println();
-        
+
         String con = "";
         while (true) {
             System.out.println("[0] Sort Nama A-Z");
@@ -34,6 +34,7 @@ public class Main {
 
             System.out.print("\033[1;92mPilih pengolahan ingin dipilih : \033[0m");
             int input;
+            
             try {
                 input = sc2.nextInt();
             } catch (Exception e) {
@@ -44,10 +45,10 @@ public class Main {
             System.out.println();
 
             if (input == 10) {
-                System.out.print("Masukkan nama barang yang ingin dicari : ");
+                System.out.print("\033[1;92mMasukkan nama barang yang ingin dicari : \033[0m");
                 String namaBarang = sc2.next();
                 tabel.search(tabel.getTabel(), namaBarang);
-            } else if (input > 10 || input < 0) {
+            } else if (input > 11 || input < 0) {
                 System.out.println("\033[1;91mMasukkan nomor pengolahan antara 0 - 10\033[0m\n");
                 continue;
             } else {
@@ -56,13 +57,13 @@ public class Main {
 
             con = "";
             while (true) {
-                System.out.print("Apakah ingin melakukan pengolahan ulang (y or n)? ");
+                System.out.print("\n\033[1;92mApakah ingin melakukan pengolahan ulang (y or n)? \033[0m");
                 con = sc2.next().toLowerCase();
                 System.out.println();
                 if (con.equals("y") || con.equals("n")) {
                     break;
                 } else {
-                    System.out.println("\033[1;91mMasukkan 'y' untuk ya atau 'n' untuk tidak\033[0m\n");
+                    System.out.println("\n\033[1;91mMasukkan 'y' untuk ya atau 'n' untuk tidak\033[0m\n");
                 }
             }
 

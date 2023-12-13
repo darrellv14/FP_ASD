@@ -52,8 +52,4 @@ public class Data {
     public void setNamaBarang(String namaBarang) {
         this.namaBarang = namaBarang;
     }
-
-    public String toString() {
-        return getNama() + "\t \t" + getNamaBarang() + "\t \t" + getJumlah() + "\t \t" + getHargaSatuan() + "\t \t" + getTotalHarga();
-    }
 }
