@@ -48,7 +48,7 @@ public class Main {
                 System.out.print("\033[1;92mMasukkan nama barang yang ingin dicari : \033[0m");
                 String namaBarang = sc2.next();
                 tabel.search(tabel.getTabel(), namaBarang);
-            } else if (input > 11 || input < 0) {
+            } else if (input > 10 || input < 0) {
                 System.out.println("\033[1;91mMasukkan nomor pengolahan antara 0 - 10\033[0m\n");
                 continue;
             } else {
