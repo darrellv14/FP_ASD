@@ -1,14 +1,26 @@
-Food Hall,Belfood Nuggets,10,50000.0,500000.0
-TaniHub,Sosis Kanzler,5,10000.0,50000.0
-Sayurbox,Fiesta Wings,5,10000.0,50000.0
-PT Segari,Champ Sosis,5,10000.0,50000.0
-Alfamidi,Frozen Delight,5,10000.0,50000.0
-Hokky Buah,Arctic Bites,100,10000.0,50000.0
-Agen Elpiji,Frosty Sausages,5,10000.0,50000.0
-SakinahMart,Snowy Delicacies,5,10000.0,50000.0
-Superindo,Icy Treats,5,10000.0,50000.0
-Giant TBK,Icy Treats,5,10000.0,50000.0
-Indomaret,Fiesta Stikie,100,25000.0,500000.0
-Alfamaret,Fiesta Stikie,100,25000.0,500000.0
-ITS Mart,Tahu Susu Yun Yi,75,28000.0,50000.0
-CV Sakinah,Barokah Wings,50,21000,500000.0
+Food Hall,Belfood Nuggets,1500,50000.0,75000000.0
+TaniHub,Sosis Kanzler,5000,10000.0,50000000.0
+Sayurbox,Fiesta Wings,4500,10000.0,45000000.0
+PT Segari,Champ Sosis,3000,10000.0,30000000.0
+Alfamidi,Frozen Delight,3750,10000.0,37500000.0
+Hokky Buah,Arctic Bites,7500,10000.0,75000000.0
+Agen Elpiji,Frosty Sausages,8000,10000.0,80000000.0
+SakinahMart,Snowy Delicacies,3500,10000.0,35000000.0
+Superindo,Icy Treats,7500,10000.0,75000000.0
+Giant TBK,Icy Treats,5000,10000.0,50000000.0
+Indomaret,Fiesta Stikie,6500,25000.0,162500000.0
+Alfamaret,Fiesta Stikie,7000,25000.0,175000000.0
+ITS Mart,Tahu Susu Yun Yi,5000,28000.0,140000000.0
+CV Sakinah,Barokah Wings,3750,21000.0,78750000.0
+Hypermart,Fiesta Stikie,6500,23000.0,149500000.0
+Mitra Segari,Cedea Fish Roll,7000,25000.0,175000000.0
+Cimory Dairy,Sosis Sapi Bockwurst,9000,29000.0,261000000.0
+Farmer's Market,Belfoods French Fries,4500,27500.0,123750000.0
+Ranch Market,Sunfish Cheese Fish Ball,3000,23000.0,69000000.0
+Circle K,Pelangi Donuts Premium,7500,25000.0,187500000.0
+Lotte Mart,So Good Spicy Wings,6000,20000.0,120000000.0
+Transmart,SunnyGold Chicken Karage,5500,21000.0,115500000.0
+Hypermart,Minaku Bola Udang,4000,25000.0,100000000.0
+Lawson,Sakana Siomay,5000,24000.0,120000000.0
+Family Mart,Kipao Minipao Cokelat,5000,23000.0,115000000.0
+Carrefour,Ayoma Rolade Sapi,4750,21000.0,99750000.0

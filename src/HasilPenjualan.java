@@ -212,17 +212,21 @@ public class HasilPenjualan {
         System.out.println();
         for (Data k : tabel) {
             if (i % 2 == 0) {
-                System.out.printf(WHITE + "%-10s%s%-15s%s%-25s%s%-10s%s%-15s%s%-15s", ("    " + i), "|",
-                        "    " + k.getNama(), "|", "    " + k.getNamaBarang(), "|", "    " + k.getJumlah(), "|",
-                        ("   Rp." + k.getHargaSatuan()), "|", ("   Rp." + k.getTotalHarga()) + RESET);
+                System.out.printf(WHITE + "%-10s%s%-15s%s%-25s%s%-10s%s%-15s%s%-15s",
+                        ("    " + i), "|", "    " + k.getNama(), "|", "    " + k.getNamaBarang(), "|",
+                        "    " + k.getJumlah(), "|", formatCurrency(k.getHargaSatuan()), "|", formatCurrency(k.getTotalHarga()) + RESET);
                 System.out.println();
             } else {
-                System.out.printf(BLACK + "%-10s%s%-15s%s%-25s%s%-10s%s%-15s%s%-15s", ("    " + i), "|",
-                        "    " + k.getNama(), "|", "    " + k.getNamaBarang(), "|", "    " + k.getJumlah(), "|",
-                        ("   Rp." + k.getHargaSatuan()), "|", ("   Rp." + k.getTotalHarga()) + RESET);
+                System.out.printf(BLACK + "%-10s%s%-15s%s%-25s%s%-10s%s%-15s%s%-15s",
+                        ("    " + i), "|", "    " + k.getNama(), "|", "    " + k.getNamaBarang(), "|",
+                        "    " + k.getJumlah(), "|", formatCurrency(k.getHargaSatuan()), "|", formatCurrency(k.getTotalHarga()) + RESET);
                 System.out.println();
             }
             i++;
         }
+    }
+    
+    private String formatCurrency(double amount) {
+        return String.format("   Rp.%,.2f", amount);
     }
 }
