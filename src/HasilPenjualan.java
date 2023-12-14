@@ -4,10 +4,6 @@ import java.util.ArrayList;
 public class HasilPenjualan {
     private ArrayList<Data> tabel = new ArrayList<Data>();
 
-    public HasilPenjualan() {
-
-    }
-
     public ArrayList<Data> getTabel() {
         return tabel;
     }
