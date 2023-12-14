@@ -202,7 +202,7 @@ public class HasilPenjualan {
         String RESET = "\033[0m"; // Text Reset
 
         int i = 1;
-        System.out.format(WHITE_BOLD_BRIGHT + "%-10s%s%-15s%s%-25s%s%-10s%s%-15s%s%-15s%n", "    No.", "|", "    Nama",
+        System.out.format(WHITE_BOLD_BRIGHT + "%-10s%s%-22s%s%-25s%s%-10s%s%-15s%s%-15s%n", "    No.", "|", "    Nama Mitra",
                 "|", "    Nama Barang", "|", "  Jumlah", "|", "  Harga Satuan", "|", "  Total Harga" + RESET);
 
         for (int j = 0; j < 94; j++) {
@@ -212,12 +212,12 @@ public class HasilPenjualan {
         System.out.println();
         for (Data k : tabel) {
             if (i % 2 == 0) {
-                System.out.printf(WHITE + "%-10s%s%-15s%s%-25s%s%-10s%s%-15s%s%-15s",
+                System.out.printf(WHITE + "%-10s%s%-22s%s%-25s%s%-10s%s%-15s%s%-15s",
                         ("    " + i), "|", "    " + k.getNama(), "|", "    " + k.getNamaBarang(), "|",
                         "    " + k.getJumlah(), "|", formatCurrency(k.getHargaSatuan()), "|", formatCurrency(k.getTotalHarga()) + RESET);
                 System.out.println();
             } else {
-                System.out.printf(BLACK + "%-10s%s%-15s%s%-25s%s%-10s%s%-15s%s%-15s",
+                System.out.printf(BLACK + "%-10s%s%-22s%s%-25s%s%-10s%s%-15s%s%-15s",
                         ("    " + i), "|", "    " + k.getNama(), "|", "    " + k.getNamaBarang(), "|",
                         "    " + k.getJumlah(), "|", formatCurrency(k.getHargaSatuan()), "|", formatCurrency(k.getTotalHarga()) + RESET);
                 System.out.println();
