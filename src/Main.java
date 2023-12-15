@@ -20,8 +20,8 @@ public class Main {
 
         String con = "";
         while (true) {
-            System.out.println("[0] Sort Nama A-Z");
-            System.out.println("[1] Sort Nama Z-A");
+            System.out.println("[0] Sort Nama Mitra A-Z");
+            System.out.println("[1] Sort Nama Mitra Z-A");
             System.out.println("[2] Sort Nama Barang A-Z");
             System.out.println("[3] Sort Nama Barang Z-A");
             System.out.println("[4] Sort Jumlah Ascending");

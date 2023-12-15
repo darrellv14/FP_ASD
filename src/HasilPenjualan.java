@@ -21,7 +21,7 @@ public class HasilPenjualan {
         int length = tabel.size();
         switch (n) {
             case 0:
-                System.out.println("\033[0;33mSorting Nama Pelanggan Ascending\n");
+                System.out.println("\033[0;33mSorting Nama Mitra Ascending\n");
                 for (int i = 1; i < length; i++) {
                     Data key = tabel.get(i);
                     int j = i - 1;
@@ -35,7 +35,7 @@ public class HasilPenjualan {
                 }
                 break;
             case 1:
-                System.out.println("\033[0;33mSorting Nama Pelanggan Descending\n");
+                System.out.println("\033[0;33mSorting Nama Mitra Descending\n");
                 for (int i = 1; i < length; ++i) {
                     Data key = tabel.get(i);
                     int j = i - 1;
@@ -176,6 +176,7 @@ public class HasilPenjualan {
                 break;
         }
         print(tabel);
+
     }
 
     public void search(ArrayList<Data> tabel, String text) {
@@ -190,16 +191,20 @@ public class HasilPenjualan {
             }
         }
 
-        System.out.println("\n\033[0;33mSearch : " + text + "\033[0m\n");
-        sort(hasil, 11);
+        if(hasil.isEmpty()) {
+            print(hasil);
+        } else {
+            System.out.println("\n\033[0;33mSearch : " + text + "\033[0m\n");
+            sort(hasil, 11);
+        }
+
     }
 
     public void print(ArrayList<Data> tabel) {
-        // Warna Text
-        String BLACK = "\033[0;30m"; // BLACK
-        String WHITE = "\033[0;37m"; // WHITE
-        String WHITE_BOLD_BRIGHT = "\033[1;97m"; // WHITE
-        String RESET = "\033[0m"; // Text Reset
+        String BLACK = "\033[0;30m";
+        String WHITE = "\033[0;37m";
+        String WHITE_BOLD_BRIGHT = "\033[1;97m";
+        String RESET = "\033[0m";
 
         int i = 1;
         System.out.format(WHITE_BOLD_BRIGHT + "%-10s%s%-22s%s%-30s%s%-12s%s%-17s%s%-17s%n", "    No.", "|", "      Nama Mitra",
