@@ -32,7 +32,7 @@ public class Main {
             System.out.println("[9] Sort Total Harga Descending");
             System.out.println("[10] Search berdasarkan Nama Barang\n");
 
-            System.out.print("\033[1;92mPilih pengolahan ingin dipilih : \033[0m");
+            System.out.print("\033[1;92mPilih pengolahan yang ingin dipilih : \033[0m");
             int input;
             
             try {
