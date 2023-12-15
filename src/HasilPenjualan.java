@@ -192,12 +192,12 @@ public class HasilPenjualan {
         }
 
         if(hasil.isEmpty()) {
+            System.out.println("\n\033[0;33mSearch : " + text + "\033[0m\n");
             print(hasil);
         } else {
             System.out.println("\n\033[0;33mSearch : " + text + "\033[0m\n");
             sort(hasil, 11);
         }
-
     }
 
     public void print(ArrayList<Data> tabel) {
