@@ -1,11 +1,13 @@
 public class Data {
+    private int id;
     private String nama;
     private String namaBarang;
     private int jumlah;
     private double hargaSatuan;
     private double totalHarga;
 
-    public Data(String nama, String namaBarang, int jumlah, double hargaSatuan, double totalHarga) {
+    public Data(int id,String nama, String namaBarang, int jumlah, double hargaSatuan, double totalHarga) {
+        this.id = id;
         this.nama = nama;
         this.namaBarang = namaBarang;
         this.jumlah = jumlah;

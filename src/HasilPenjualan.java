@@ -3,14 +3,16 @@ import java.util.ArrayList;
 
 public class HasilPenjualan {
     private ArrayList<Data> tabel = new ArrayList<Data>();
+    private int id = 1;
 
     public ArrayList<Data> getTabel() {
         return tabel;
     }
 
     public void add(String nama, String namaBarang, int jumlah, double hargaSatuan, double totalHarga) {
-        Data data = new Data(nama, namaBarang, jumlah, hargaSatuan, totalHarga);
+        Data data = new Data(this.id,nama, namaBarang, jumlah, hargaSatuan, totalHarga);
         tabel.add(data);
+        this.id++;
     }
 
     public void remove(int n) {
